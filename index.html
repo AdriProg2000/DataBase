@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Adrin Database · Extended Modern UI</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+  /* ------------------ BASE ------------------ */
+  body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: #0d1117;
+    color: #e6edf3;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3 {
+    font-weight: 600;
+  }
+
+  /* ------------------ HEADER ------------------ */
+  header {
+    padding: 80px 40px;
+    text-align: center;
+    background: linear-gradient(135deg, #7c3aed55, #0ea5e955);
+    border-bottom: 1px solid #ffffff22;
+    animation: fadeIn 1s ease-out;
+  }
+
+  header h1 {
+    font-size: 3.2rem;
+    margin-bottom: 12px;
+    letter-spacing: 2px;
+  }
+
+  header p {
+    font-size: 1.2rem;
+    opacity: 0.85;
+  }
+
+  /* ------------------ CONTAINER ------------------ */
+  .container {
+    max-width: 1200px;
+    margin: 70px auto;
+    padding: 0 30px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    opacity: 0.85;
+    animation: fadeInUp 0.8s ease-out;
+  }
+
+  /* ------------------ CARDS ------------------ */
+  .card {
+    padding: 35px;
+    border-radius: 20px;
+    background: #161b22;
+    border: 1px solid #ffffff15;
+    box-shadow: 0 0 25px #00000055;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    animation: fadeInUp 0.8s ease-out;
+  }
+
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 40px #00000088;
+  }
+
+  .tag {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: #7c3aed33;
+    border: 1px solid #7c3aed88;
+    margin-right: 10px;
+    font-size: 0.8rem;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #7c3aed, #ec4899);
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: opacity 0.25s ease;
+  }
+
+  .btn:hover {
+    opacity: 0.8;
+  }
+
+  /* ------------------ GRID ------------------ */
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  @media (max-width: 900px) {
+    .grid-2 {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* ------------------ STATS ------------------ */
+  .stats-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    margin-bottom: 50px;
+  }
+
+  .stat {
+    flex: 1;
+    padding: 25px;
+    border-radius: 16px;
+    background: #1b222c;
+    border: 1px solid #ffffff15;
+    text-align: center;
+    animation: fadeInUp 0.8s ease-out;
+  }
+
+  .stat h3 {
+    font-size: 2.2rem;
+    margin: 0;
+  }
+
+  .stat p {
+    opacity: 0.7;
+    margin-top: 8px;
+  }
+
+  /* ------------------ TIMELINE ------------------ */
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .timeline-item {
+    padding-left: 20px;
+    border-left: 3px solid #7c3aed;
+  }
+
+  .timeline-item h4 {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+
+  .timeline-item span {
+    font-size: 0.85rem;
+    opacity: 0.7;
+  }
+
+  /* ------------------ ANIMATIONS ------------------ */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ------------------ FOOTER ------------------ */
+  footer {
+    margin-top: 100px;
+    padding: 50px;
+    text-align: center;
+    opacity: 0.6;
+    font-size: 0.9rem;
+  }
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>ADRIN DATABASE</h1>
+  <p>A website with all my projects</p>
+</header>
+
+<div class="container">
+
+  <!-- ------------------ ESTADÍSTICAS ------------------ -->
+  <h2 class="section-title">System status</h2>
+
+  <div class="stats-box">
+    <div class="stat">
+      <h3>6</h3>
+      <p>Active Downloads</p>
+    </div>
+    <div class="stat">
+      <h3>0.1.0</h3>
+      <p>Last build</p>
+    </div>
+    <div class="stat">
+      <h3>Building...</h3>
+      <p>System status</p>
+    </div>
+  </div>
+
+  <!-- ------------------ DESCARGAS ------------------ -->
+  <h2 class="section-title">Downloads</h2>
+
+  <div class="grid-2">
+
+    <div class="card">
+      <h3>Title</h3>
+      <p>Subtitle</p>
+      <span class="tag">Type</span>
+      <span class="tag">Type</span><br><br>
+      <a class="btn" href="#">Download</a>
+    </div>
+
+    <div class="card">
+      <h3>Title</h3>
+      <p>Subtitle</p>
+      <span class="tag">Type</span>
+      <span class="tag">Type</span><br><br>
+      <a class="btn" href="#">Download</a>
+    </div>
+
+    <div class="card">
+      <h3>Title</h3>
+      <p>Subtitle</p>
+      <span class="tag">Type</span>
+      <span class="tag">Type</span><br><br>
+      <a class="btn" href="#">Download</a>
+    </div>
+
+    <div class="card">
+      <h3>Title</h3>
+      <p>Subtitle</p>
+      <span class="tag">Type</span>
+      <span class="tag">Type</span><br><br>
+      <a class="btn" href="#">Download</a>
+    </div>
+
+    <div class="card">
+      <h3>Title</h3>
+      <p>Subtitle</p>
+      <span class="tag">Type</span>
+      <span class="tag">Type</span><br><br>
+      <a class="btn" href="#">Download</a>
+    </div>
+
+    <!-- DESCARGA Nº6 -->
+    <div class="card">
+      <h3>Title</h3>
+      <p>Subtitle</p>
+      <span class="tag">Type</span>
+      <span class="tag">Type</span><br><br>
+      <a class="btn" href="#">Download</a>
+    </div>
+
+  </div>
+
+  <!-- ------------------ ACTIVIDAD RECIENTE ------------------ -->
+  <h2 class="section-title">Recient activity</h2>
+
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <h4>Building Website</h4>
+      <span>29/12/2025 · 10:33</span>
+      <p>Im building the website, temporally the dowloads will be desactivated, check the page soon!</p>
+    </div>
+
+    <div class="timeline-item">
+      <h4>Title</h4>
+      <span>Time</span>
+      <p>Subtitle</p>
+    </div>
+
+    <div class="timeline-item">
+      <h4>Title</h4>
+      <span>Time</span>
+      <p>Subtitle</p>
+    </div>
+
+  </div>
+
+</div>
+
+<footer>
+  ADRIN DATABASE · v1.1
+</footer>
+
+</body>
+</html>
